@@ -1,0 +1,5 @@
+services:
+    Mitic\IdentidadElectronicaOAuthBundle\OAuth\ResourceOwner\IdentidadElectronicaResourceOwner:
+        public: true
+    Mitic\IdentidadElectronicaOAuthBundle\JWT\HasSubject:
+        public: true
