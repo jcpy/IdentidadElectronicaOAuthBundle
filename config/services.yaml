@@ -1,5 +1,4 @@
 services:
     Mitic\IdentidadElectronicaOAuthBundle\OAuth\ResourceOwner\IdentidadElectronicaResourceOwner:
-        public: true
-    Mitic\IdentidadElectronicaOAuthBundle\JWT\HasSubject:
-        public: true
+        tags:
+            - { name: hwi_oauth.resource_owner, type: identidad_electronica }
