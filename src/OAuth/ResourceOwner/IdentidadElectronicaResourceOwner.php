@@ -1,5 +1,5 @@
 <?php
-namespace Mitic\IdentidadElectronicaOAuthBundle\Security\OAuth\ResourceOwner;
+namespace Mitic\IdentidadElectronicaOAuthBundle\OAuth\ResourceOwner;
 
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Contracts\HttpClient\ResponseInterface;
@@ -15,7 +15,7 @@ use Lcobucci\JWT\Validation\Constraint\ValidAt;
 use Lcobucci\JWT\Signer\Key\InMemory;
 use Lcobucci\Clock\SystemClock;
 use Lcobucci\JWT\Signer\Hmac\Sha256;
-use App\Security\JWT\HasSubject;
+use Mitic\IdentidadElectronicaOAuthBundle\JWT\HasSubject;
 
 final class IdentidadElectronicaResourceOwner extends GenericOAuth2ResourceOwner
 {
