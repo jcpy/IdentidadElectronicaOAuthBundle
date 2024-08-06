@@ -1,3 +1,4 @@
 services:
     Mitic\IdentidadElectronicaOAuthBundle\OAuth\ResourceOwner\IdentidadElectronicaResourceOwner:
-        public: true
+        tags:
+            - { name: hwi_oauth.provider, id: 'identidad_electronica' }
