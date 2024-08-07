@@ -81,10 +81,10 @@ final class IdentidadElectronicaResourceOwner extends GenericOAuth2ResourceOwner
         $token = $config->parser()->parse($tokenString);
 
         $constraints = [
-            new IssuedBy($_ENV['MITIC_JWT_CLAIM_ISS']),
+            new IssuedBy($this->options['iss']),
             new PermittedFor($this->options['client_id']),
             new HasSubject(),
-            new ValidAt(SystemClock::fromSystemTimezone()),
+            new ValidAt(new SystemClock(new \DateTimeZone($this->options['timezone']))),
             new SignedWith($config->signer(), $config->signingKey())
         ];
 
@@ -139,6 +139,8 @@ final class IdentidadElectronicaResourceOwner extends GenericOAuth2ResourceOwner
 
         $resolver->setDefaults([
             'infos_url' => '',
+            'iss' => '',
+            'timezone' => '',
         ]);
     }
 
