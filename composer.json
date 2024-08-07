@@ -5,7 +5,7 @@
     "require": {
         "php": "^8.2",
         "hwi/oauth-bundle": "^2.2",
-        "lcobucci/jwt": "^5.0"
+        "lcobucci/jwt": "^5.3"
     },
     "autoload": {
         "psr-4": {
